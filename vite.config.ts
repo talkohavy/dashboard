@@ -1,12 +1,13 @@
 import path from "node:path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
+import dts from "vite-plugin-dts";
 
 const port = +(process.env.VITE_PORT ?? 3000);
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), dts({ include: ["lib"] })], // <--- 💡 The dts plugin would also work to exclude: ['src'] or use a different Typescript config file for the build process.
   server: {
     port: port, // Note if this port is already being used, Vite will automatically try the next available port so this may not be the actual port the server ends up listening on.
     strictPort: true, // default is false. Set to true to exit if port is already in use, instead of automatically trying the next available port.
