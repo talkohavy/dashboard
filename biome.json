@@ -44,7 +44,7 @@
   },
   "formatter": {
     "enabled": true,
-    "formatWithErrors": false,
+    "formatWithErrors": true,
     "include": ["src"],
     "ignore": [
       "public",
