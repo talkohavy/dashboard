@@ -1,5 +1,11 @@
 # @talkohavy/dashboard
 
+## 0.0.8
+
+### Patch Changes
+
+- 6c4e085: brought back react as both a devDependency & a peerDependency
+
 ## 0.0.7
 
 ### Patch Changes
