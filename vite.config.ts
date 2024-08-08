@@ -1,12 +1,16 @@
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { extname, relative } from 'path';
+import { glob } from 'glob';
 import { defineConfig } from 'vite';
+import { libInjectCss } from 'vite-plugin-lib-inject-css';
 import react from '@vitejs/plugin-react-swc';
 
 const port = +(process.env.VITE_PORT ?? 3000);
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()], // <--- 💡 The dts plugin would also work to exclude: ['src'] or use a different Typescript config file for the build process.
+  plugins: [react(), libInjectCss()], // <--- 💡 The dts plugin would also work to exclude: ['src'] or use a different Typescript config file for the build process.
   server: {
     port, // Note if this port is already being used, Vite will automatically try the next available port so this may not be the actual port the server ends up listening on.
     strictPort: true, // default is false. Set to true to exit if port is already in use, instead of automatically trying the next available port.
@@ -22,6 +26,18 @@ export default defineConfig({
     },
     rollupOptions: {
       external: ['react', 'react/jsx-runtime'],
+      input: Object.fromEntries(
+        glob
+          .sync('lib/**/*.{ts,tsx}', {
+            ignore: ['lib/**/*.d.ts'],
+          })
+          .map((file) => [
+            // Step 1: Turn the name of the entry point 'lib/nested/foo.ts' into 'nested/foo'
+            relative('lib', file.slice(0, file.length - extname(file).length)),
+            // Step 2: Turn the absolute path to the entry file 'lib/nested/foo.ts' to '/project/lib/nested/foo.ts'
+            fileURLToPath(new URL(file, import.meta.url)),
+          ]),
+      ),
     },
   },
 });
