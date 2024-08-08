@@ -1,5 +1,11 @@
 # @talkohavy/dashboard
 
+## 0.2.1
+
+### Patch Changes
+
+- 4fcc0ec: types of react-grid-layout MUST be installed as a dependency in order for IWidget to be recognized as a type, instead of any
+
 ## 0.2.0
 
 ### Minor Changes
