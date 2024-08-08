@@ -2,8 +2,6 @@ import { Layout } from 'react-grid-layout';
 
 export type DashboardData<T = string> = Array<IWidget<T>>;
 
-export type DashboardDataDB = Array<Layout>;
-
 export type DashboardMergedSettings = {
   grid: {
     alwaysVisible: boolean;
