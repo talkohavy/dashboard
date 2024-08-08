@@ -1,0 +1,20 @@
+.widgetHolderWithGap {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+.widget {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  padding: 16px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--base-10);
+  box-sizing: border-box;
+}
