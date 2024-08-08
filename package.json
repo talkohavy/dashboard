@@ -1,21 +1,20 @@
 {
   "name": "@talkohavy/dashboard",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "clean": "rm -rf node_modules",
     "format-check": "prettier . --check --config .prettierrc.mjs --ignore-path .prettierignore",
-    "format": "prettier . --write --log-level silent --config .prettierrc.mjs --ignore-path .prettierignore",
+    "format": "prettier . --write --log-level silent --config .prettierrc.json --ignore-path .prettierignore",
     "dev": "vite",
     "test": "node --test",
     "cs-add": "pnpm changeset add",
-    "cs-bump": "npm run test && pnpm changeset version",
+    "cs-bump": "npm run test && pnpm changeset version && npm run cs-bump-post-format-and-commit",
+    "cs-bump-post-format-and-commit": "npm run format && git add . && git commit -m 'RELEASING: Releasing 1 package(s)'",
     "cs-status": "pnpm changeset status --verbose",
     "cs-publish": "cd dist && pnpm changeset publish",
     "build": "node build.config.js",
@@ -25,9 +24,7 @@
     "preview": "vite preview",
     "prepare": "husky"
   },
-  "sideEffects": [
-    "**/*.css"
-  ],
+  "sideEffects": ["**/*.css"],
   "devDependencies": {
     "@changesets/cli": "^2.27.7",
     "@types/node": "^22.1.0",
