@@ -1,5 +1,11 @@
 # @talkohavy/dashboard
 
+## 0.2.2
+
+### Patch Changes
+
+- 65c39c1: romved all var css
+
 ## 0.2.1
 
 ### Patch Changes
