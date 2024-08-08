@@ -1,5 +1,11 @@
 # @talkohavy/dashboard
 
+## 0.2.3
+
+### Patch Changes
+
+- abd9541: globally importing the dashboards.css file
+
 ## 0.2.2
 
 ### Patch Changes
