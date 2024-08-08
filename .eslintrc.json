@@ -1,5 +1,7 @@
 {
   "root": true,
   "extends": ["plugin:ezlint/recommended"],
-  "rules": {}
+  "rules": {
+    "import/extensions": "off"
+  }
 }
