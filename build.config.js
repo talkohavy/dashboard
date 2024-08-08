@@ -1,5 +1,5 @@
 import { execSync } from 'child_process';
-import fs from 'fs';
+import fs, { cpSync } from 'fs';
 
 const outDirName = 'dist';
 
@@ -11,6 +11,10 @@ async function buildPackageConfig() {
   buildWithVite();
 
   copyReadmeFile();
+
+  copyChangesetDirectory();
+
+  copyNpmIgnore();
 
   copyAndManipulatePackageJsonFile();
 
@@ -52,4 +56,14 @@ function copyAndManipulatePackageJsonFile() {
   // Step 4: create new package.json file in the output folder
   fs.writeFileSync(`./${outDirName}/package.json`, JSON.stringify(packageJson));
   console.log('-- package.json file written successfully!');
+}
+
+function copyChangesetDirectory() {
+  console.log('- Step 5: copy the .changeset directory');
+  cpSync('.changeset', `${outDirName}/.changeset`, { recursive: true });
+}
+
+function copyNpmIgnore() {
+  console.log('- Step 6: copy the .npmignore file');
+  cpSync('.npmignore', `${outDirName}/.npmignore`);
 }
