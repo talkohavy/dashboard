@@ -1,5 +1,11 @@
 # @talkohavy/dashboard
 
+## 0.0.7
+
+### Patch Changes
+
+- 9ea28a0: removed react entirely from decDependencies & peerDependencies
+
 ## 0.0.6
 
 ### Patch Changes
