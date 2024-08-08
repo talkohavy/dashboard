@@ -68,6 +68,7 @@ function copyAndManipulatePackageJsonFile() {
 
   // Step 4: remove 'outDirName/' from "main" & "types"
   packageJson.main = packageJson.main.replace(`${outDirName}/`, '');
+  packageJson.types = packageJson.types.replace(`${outDirName}/`, '');
 
   // Step 5: create new package.json file in the output folder
   fs.writeFileSync(`./${outDirName}/package.json`, JSON.stringify(packageJson));
