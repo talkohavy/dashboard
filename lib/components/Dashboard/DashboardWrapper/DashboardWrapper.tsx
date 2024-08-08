@@ -8,7 +8,7 @@ type DashboardCardProps = PropsWithChildren<{
   testId?: string;
 }>;
 
-export default function DashboardWrapper(props: DashboardCardProps) {
+export function DashboardWrapper(props: DashboardCardProps) {
   const { className, style, children, testId } = props;
 
   return (
