@@ -11,7 +11,7 @@ type WidgetProps = PropsWithChildren<{
   className?: string;
 }>;
 
-export function Widget(props: WidgetProps) {
+export default function Widget(props: WidgetProps) {
   const {
     children,
     gapBetweenWidgets = 10,
