@@ -1,1 +1,1 @@
-export { Undraggable } from './Undraggable';
+export { default } from './Undraggable';

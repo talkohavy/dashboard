@@ -7,7 +7,7 @@ type UndraggableProps = PropsWithChildren<{
   style?: any;
 }>;
 
-export function Undraggable(props: UndraggableProps) {
+export default function Undraggable(props: UndraggableProps) {
   const { children, className, style } = props;
 
   return (
