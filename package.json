@@ -24,6 +24,10 @@
     "preview": "vite preview"
   },
   "sideEffects": ["**/*.css"],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "restricted"
+  },
   "devDependencies": {
     "@changesets/cli": "^2.27.7",
     "@types/node": "^22.1.0",
