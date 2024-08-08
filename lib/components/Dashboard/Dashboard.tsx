@@ -8,6 +8,7 @@ import DashboardWrapper from './DashboardWrapper';
 import GridOverlay from './GridOverlay';
 import { getMergedDashboardSettings, runValidationsOnData } from './helpers';
 import { DashboardSettings, OnChangeLayoutProps, OnResizeOrDragStopProps } from './types';
+import './dashboards.css';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
