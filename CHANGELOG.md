@@ -1,5 +1,11 @@
 # @talkohavy/dashboard
 
+## 0.0.4
+
+### Patch Changes
+
+- de0ac61: added some visible style to the button
+
 ## 0.0.3
 
 ### Patch Changes
