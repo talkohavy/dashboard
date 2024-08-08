@@ -1,5 +1,11 @@
 # @talkohavy/dashboard
 
+## 0.0.6
+
+### Patch Changes
+
+- a29086d: removed files key from package.json - no need for whitelisting
+
 ## 0.0.5
 
 ### Patch Changes
