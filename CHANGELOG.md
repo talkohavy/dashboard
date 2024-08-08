@@ -1,5 +1,11 @@
 # @talkohavy/dashboard
 
+## 0.1.1
+
+### Patch Changes
+
+- 7c7e0c6: everything is export default now
+
 ## 0.1.0
 
 ### Minor Changes
