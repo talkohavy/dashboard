@@ -1,26 +1,33 @@
 {
   "name": "@talkohavy/dashboard",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "clean": "rm -rf dist",
-    "format": "prettier . --check --config .prettierrc.mjs --ignore-path .prettierignore",
+    "clean": "rm -rf node_modules",
+    "format-check": "prettier . --check --config .prettierrc.mjs --ignore-path .prettierignore",
+    "format": "prettier . --write --log-level silent --config .prettierrc.mjs --ignore-path .prettierignore",
     "dev": "vite",
+    "test": "node --test",
     "cs-add": "pnpm changeset add",
-    "cs-bump": "pnpm changeset version",
+    "cs-bump": "npm run test && pnpm changeset version",
     "cs-status": "pnpm changeset status --verbose",
     "cs-publish": "cd dist && pnpm changeset publish",
     "build": "node build.config.js",
     "pub": "npm run build && cd dist && npm publish",
     "prepublishOnly": "npm run build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky"
   },
-  "sideEffects": ["**/*.css"],
+  "sideEffects": [
+    "**/*.css"
+  ],
   "devDependencies": {
     "@changesets/cli": "^2.27.7",
     "@types/node": "^22.1.0",
