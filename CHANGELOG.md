@@ -1,5 +1,11 @@
 # @talkohavy/dashboard
 
+## 0.1.0
+
+### Minor Changes
+
+- 96a524f: Added a Dashboard & Widget components
+
 ## 0.0.8
 
 ### Patch Changes
