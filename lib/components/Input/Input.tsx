@@ -4,7 +4,7 @@ type TextProps = React.InputHTMLAttributes<HTMLInputElement>;
 
 export function Input(props: TextProps) {
   return (
-    <div {...props} className={styles.text}>
+    <div {...props} className={`${props.className} ${styles.input}`}>
       Text
     </div>
   );
