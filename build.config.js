@@ -1,6 +1,18 @@
 import { execSync } from 'child_process';
 import fs, { cpSync } from 'fs';
 
+/**
+ * @typedef {{
+ *   main: string,
+ *   types: string,
+ *   private?: string | boolean,
+ *   scripts?: Record<string, string>,
+ *   publishConfig: {
+ *     access: string
+ *   },
+ * }} PackageJson
+ */
+
 const outDirName = 'dist';
 
 buildPackageConfig();
@@ -41,6 +53,7 @@ function copyReadmeFile() {
 function copyAndManipulatePackageJsonFile() {
   console.log('- Step 4: copy & manipulate the package.json file');
   // Step 1: get the original package.json file
+  /** @type {PackageJson} */
   const packageJson = JSON.parse(fs.readFileSync('./package.json').toString());
 
   // Step 2: Remove all scripts
@@ -53,7 +66,10 @@ function copyAndManipulatePackageJsonFile() {
   console.log('-- changed from private to public');
   console.log('-- changed publishConfig access to public');
 
-  // Step 4: create new package.json file in the output folder
+  // Step 4: remove 'outDirName/' from "main" & "types"
+  packageJson.main = packageJson.main.replace(`${outDirName}/`, '');
+
+  // Step 5: create new package.json file in the output folder
   fs.writeFileSync(`./${outDirName}/package.json`, JSON.stringify(packageJson));
   console.log('-- package.json file written successfully!');
 }

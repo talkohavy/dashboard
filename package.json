@@ -5,9 +5,7 @@
   "type": "module",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "scripts": {
     "clean": "rm -rf node_modules",
     "format-check": "prettier . --check --config .prettierrc.mjs --ignore-path .prettierignore",
@@ -25,9 +23,7 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
-  "sideEffects": [
-    "**/*.css"
-  ],
+  "sideEffects": ["**/*.css"],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "restricted"
