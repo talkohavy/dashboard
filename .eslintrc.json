@@ -1,6 +1,7 @@
 {
   "root": true,
   "extends": ["plugin:ezlint/recommended"],
+  "ignorePatterns": ["dist"],
   "rules": {
     "import/extensions": "off",
     "import/no-unresolved": [
