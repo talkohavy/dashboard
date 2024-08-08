@@ -19,7 +19,7 @@ type DashboardProps = PropsWithChildren<{
   testId?: string;
 }>;
 
-export default function Dashboard(props: DashboardProps) {
+export function Dashboard(props: DashboardProps) {
   const { data, settings: settingsToMerge, onLayoutChange, children, className, testId = '' } = props;
 
   useMemo(() => runValidationsOnData(data), [data]);
