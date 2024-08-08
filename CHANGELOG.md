@@ -1,5 +1,11 @@
 # @talkohavy/dashboard
 
+## 0.2.0
+
+### Minor Changes
+
+- 4e78ddc: exporting meaningfull types from dashboard
+
 ## 0.1.1
 
 ### Patch Changes
