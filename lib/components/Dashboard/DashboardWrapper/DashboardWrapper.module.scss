@@ -1,0 +1,12 @@
+.dashboardWrapper {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+  background-color: var(--base-0);
+}
+
+.defaultDashboardWrapperStyle {
+  border: 1px solid black;
+  border-radius: 8px;
+}

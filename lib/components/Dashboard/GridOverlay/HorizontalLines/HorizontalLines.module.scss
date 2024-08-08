@@ -1,0 +1,12 @@
+.horizontalLines {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+.singleHorizontalLine {
+  width: 100%;
+  border-bottom: 1px dashed;
+  box-sizing: border-box;
+}
