@@ -1,8 +1,8 @@
 import { PropsWithChildren } from 'react';
 import clsx from 'clsx';
-import { DASHBOARD_DEFAULT_RESIZE_HANDLERS } from '../constants';
-import FakeResizeHandle from '../FakeResizeHandler';
-import { HandlerPositions } from '../types';
+import { DASHBOARD_DEFAULT_RESIZE_HANDLERS } from '../Dashboard/constants';
+import { HandlerPositions } from '../Dashboard/types';
+import FakeResizeHandle from './FakeResizeHandler';
 import styles from './Widget.module.scss';
 
 type WidgetProps = PropsWithChildren<{
