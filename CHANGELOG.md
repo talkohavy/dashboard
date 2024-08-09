@@ -1,5 +1,11 @@
 # @talkohavy/dashboard
 
+## 0.2.4
+
+### Patch Changes
+
+- 5b429fc: forgot to import react-grid-layout's main css file
+
 ## 0.2.3
 
 ### Patch Changes
