@@ -29,7 +29,7 @@ export default defineConfig({
       input: Object.fromEntries(
         glob
           .sync('lib/**/*.{ts,tsx}', {
-            ignore: ['lib/**/*.d.ts'],
+            ignore: ['lib/**/*.d.ts', 'lib/**/*.stories.tsx'],
           })
           .map((file) => [
             // Step 1: Turn the name of the entry point 'lib/nested/foo.ts' into 'nested/foo'
