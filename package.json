@@ -7,6 +7,7 @@
   "types": "dist/main.d.ts",
   "scripts": {
     "clean": "rm -rf node_modules",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "format-check": "prettier . --check --config .prettierrc.mjs --ignore-path .prettierignore",
     "format": "prettier . --write --log-level silent --config .prettierrc.json --ignore-path .prettierignore",
     "dev": "vite",
@@ -17,9 +18,7 @@
     "cs-status": "pnpm changeset status --verbose",
     "cs-publish": "pnpm run build && cd dist && pnpm changeset publish",
     "build": "node build.config.js",
-    "pub": "npm run build && cd dist && npm publish",
     "prepublishOnly": "npm run build",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "sideEffects": ["**/*.css"],
