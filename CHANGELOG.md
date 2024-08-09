@@ -1,5 +1,11 @@
 # @talkohavy/dashboard
 
+## 0.2.6
+
+### Patch Changes
+
+- 62d594e: removed unused components, took Widget & Undraggble components outside of Dashboard, and also put FakeResizeHandler inside of Widget component
+
 ## 0.2.5
 
 ### Patch Changes
