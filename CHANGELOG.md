@@ -1,5 +1,11 @@
 # @talkohavy/dashboard
 
+## 0.2.5
+
+### Patch Changes
+
+- 7202437: removed var inside dashboards.css
+
 ## 0.2.4
 
 ### Patch Changes
