@@ -23,6 +23,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'lib/main.ts'),
       formats: ['es'],
+      fileName: 'tal2', // the name of the main entry file output. defaults to the value under the "name" property of your package json. If your name is a scoped name (i.e. @talkohavy/dashboard) then dashboard will be taken as the name. This field is ignored when using 'rollupOptions.output'.
     },
     rollupOptions: {
       external: ['react', 'react/jsx-runtime'],
