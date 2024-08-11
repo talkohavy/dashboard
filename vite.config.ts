@@ -18,8 +18,8 @@ export default defineConfig({
     // watch: { usePolling: true }, // When running Vite on Windows Subsystem for Linux (WSL) 2, if the project folder resides in a Windows filesystem, you'll need to set this option to { usePolling: true }. This is due to a WSL2 limitation with the Windows filesystem. The Vite server watcher skips .git/ and node_modules/ directories by default.
   },
   build: {
-    copyPublicDir: false, // <--- make this `false` so that it wouldn't copy the vote.svg file from the public folder.
-    emptyOutDir: false,
+    copyPublicDir: false, // <--- defaults to `true`. Set this to `false` so that it wouldn't copy the vote.svg file from the public folder.
+    emptyOutDir: false, // <--- defaults to `true`
     lib: {
       entry: path.resolve(__dirname, 'lib/main.ts'),
       formats: ['es'],
