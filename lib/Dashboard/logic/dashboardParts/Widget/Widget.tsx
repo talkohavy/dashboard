@@ -21,7 +21,10 @@ export default function Widget(props: WidgetProps) {
   } = props;
 
   return (
-    <div className={styles.widgetHolderWithGap} style={{ padding: gapBetweenWidgets }}>
+    <div
+      className={clsx(CLASSES.widgetHolderWithGap, styles.widgetHolderWithGap)}
+      style={{ padding: gapBetweenWidgets }}
+    >
       <div className={clsx(CLASSES.widget, styles.widget, styles.defaultWidgetStyle, className)}>
         {children}
 
