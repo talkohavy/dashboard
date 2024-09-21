@@ -1,5 +1,11 @@
 # @talkohavy/dashboard
 
+## 0.2.9
+
+### Patch Changes
+
+- moved background-color from dashboardWrapper to defaultDashboardWrapperStyle
+
 ## 0.2.8
 
 ### Patch Changes
