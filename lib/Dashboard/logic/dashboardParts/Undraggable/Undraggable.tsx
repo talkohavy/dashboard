@@ -1,5 +1,6 @@
 import { PropsWithChildren } from 'react';
 import clsx from 'clsx';
+import { CLASSES } from '../../../../constants.ts';
 import styles from './Undraggable.module.scss';
 
 type UndraggableProps = PropsWithChildren<{
@@ -11,7 +12,7 @@ export default function Undraggable(props: UndraggableProps) {
   const { children, className, style } = props;
 
   return (
-    <div className={clsx('do-not-drag-me', styles.undraggable, className)} style={style}>
+    <div className={clsx(CLASSES.doNotDragMe, styles.undraggable, className)} style={style}>
       {children}
     </div>
   );

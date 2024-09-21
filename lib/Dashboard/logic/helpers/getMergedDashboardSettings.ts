@@ -1,3 +1,4 @@
+import { DashboardMergedSettings, DashboardSettings } from '../../types.ts';
 import {
   COMPACT_TYPE,
   DASHBOARD_DEFAULT_BREAKPOINT_SIZES,
@@ -6,7 +7,6 @@ import {
   DASHBOARD_DEFAULT_LINES_COLOR,
   DASHBOARD_DEFAULT_ROW_HEIGHT,
 } from '../constants';
-import { DashboardMergedSettings, DashboardSettings } from '../types';
 
 type getMergedDashboardSettingsProps = {
   settingsToMerge?: DashboardSettings;

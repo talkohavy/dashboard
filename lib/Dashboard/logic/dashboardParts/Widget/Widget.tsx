@@ -1,5 +1,6 @@
 import { PropsWithChildren } from 'react';
 import clsx from 'clsx';
+import { CLASSES } from '../../../../constants.ts';
 import { HandlerPositions } from '../../../types.ts';
 import { DASHBOARD_DEFAULT_RESIZE_HANDLERS } from '../../constants.ts';
 import FakeResizeHandle from './FakeResizeHandler';
@@ -21,7 +22,7 @@ export default function Widget(props: WidgetProps) {
 
   return (
     <div className={styles.widgetHolderWithGap} style={{ padding: gapBetweenWidgets }}>
-      <div className={clsx('custom-widget', styles.widget, className)}>
+      <div className={clsx(CLASSES.widget, styles.widget, styles.defaultWidgetStyle, className)}>
         {children}
 
         {axisHandlerPositions.map((position) => (

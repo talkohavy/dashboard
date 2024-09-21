@@ -2,6 +2,7 @@ import { PropsWithChildren, useCallback, useEffect, useMemo, useRef, useState } 
 import clsx from 'clsx';
 import isEqual from 'lodash/isEqual';
 import { Layout, Responsive, WidthProvider } from 'react-grid-layout';
+import { CLASSES } from '../constants.ts';
 import styles from './Dashboard.module.scss';
 import { DASHBOARD_DEFAULT_ROW_HEIGHT } from './logic/constants.ts';
 import DashboardWrapper from './logic/dashboardParts/DashboardWrapper/DashboardWrapper.tsx';
@@ -113,7 +114,7 @@ export default function Dashboard(props: DashboardProps) {
       testId={testId}
     >
       <div
-        className={clsx(styles.dashboard, 'dashboard-grab-handler')}
+        className={clsx(CLASSES.dashboard, styles.dashboard)}
         ref={dashboardRef}
         onScroll={setHorizontalLinesCountAndVerticalLinesHeight as any}
       >
@@ -128,7 +129,7 @@ export default function Dashboard(props: DashboardProps) {
 
         <ResponsiveGridLayout
           autoSize // If true, the container height swells and contracts to fit contents.
-          draggableCancel='.do-not-drag-me' // <--- A CSS selector for tags that will not be draggable. If you forget the leading . it will not work. .react-resizable-handle is always prepended to this value.
+          draggableCancel={CLASSES.doNotDragMe} // <--- A CSS selector for tags that will not be draggable. If you forget the leading . it will not work. .react-resizable-handle is always prepended to this value.
           layouts={{ lg: data }}
           {...settings.dashboard.props}
           onDragStart={(newLayout: Array<Layout>) => {

@@ -14,7 +14,7 @@ export default function VerticalLines(props: VerticalLinesProps) {
   const verticalLines = useMemo(() => Array.from(Array(verticalLinesCount).keys()), [verticalLinesCount]);
 
   return (
-    <div className={styles.verticalLines} style={{ left: 0, top: 0 }}>
+    <div className={styles.verticalLines}>
       {verticalLines.map((_, index) => (
         <div
           key={`vertical-line-${index}`}

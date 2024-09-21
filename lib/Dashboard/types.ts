@@ -21,7 +21,7 @@ export type DashboardMergedSettings = {
       margin: any; // <--- I once used this to give margin between widgets, but today I do that by putting a padding on the Widget component.
       containerPadding: any;
       rowHeight: number;
-      resizeHandles: Array<'se' | 'sw' | 'ne' | 'nw' | 'n' | 's' | 'e' | 'w'>;
+      resizeHandles: Array<HandlerPositions>;
     };
   };
 };
@@ -78,6 +78,7 @@ export type IWidget<T = string> = {
   id?: string;
   type: T;
   props: any;
+  meta?: any;
 } & Layout;
 
 export type OnChangeLayoutProps = {

@@ -1,4 +1,4 @@
-import { HandlerPositions } from './types';
+import { HandlerPositions } from '../types.ts';
 
 const DASHBOARD_DEFAULT_COLUMN_COUNT = 8;
 const DASHBOARD_DEFAULT_ROW_HEIGHT = 50;

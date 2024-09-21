@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import { CLASSES } from '../../../../../constants.ts';
 import styles from './FakeResizeHandler.module.scss';
 
 type ResizeHandlerPos = { handleAxis?: string };
@@ -9,9 +10,10 @@ export default function FakeResizeHandle(props: ResizeHandlerPos) {
   return (
     <div
       className={clsx(
-        'fake-resizable-handle',
-        `fake-resizable-handle-${handleAxis}`,
+        CLASSES.fakeResizeHandle,
+        `${CLASSES.fakeResizeHandle}-${handleAxis}`,
         styles.resizeHandle,
+        styles.defaultResizeHandleStyle,
         styles[handleAxis],
       )}
     />

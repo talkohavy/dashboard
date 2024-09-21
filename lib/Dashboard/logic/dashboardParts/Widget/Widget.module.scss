@@ -10,11 +10,14 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  border-radius: 6px;
-  padding: 16px;
   height: 100%;
   width: 100%;
   overflow: hidden;
-  background-color: #ddd;
   box-sizing: border-box;
+}
+
+.defaultWidgetStyle {
+  padding: 16px;
+  background-color: #ddd;
+  border-radius: 6px;
 }

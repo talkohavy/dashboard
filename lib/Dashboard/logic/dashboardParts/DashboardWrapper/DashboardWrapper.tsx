@@ -1,5 +1,6 @@
 import { PropsWithChildren } from 'react';
 import clsx from 'clsx';
+import { CLASSES } from '../../../../constants.ts';
 import styles from './DashboardWrapper.module.scss';
 
 type DashboardCardProps = PropsWithChildren<{
@@ -13,7 +14,11 @@ export default function DashboardWrapper(props: DashboardCardProps) {
 
   return (
     <div
-      className={clsx(styles.dashboardWrapper, className ?? styles.defaultDashboardWrapperStyle)}
+      className={clsx(
+        CLASSES.dashboardWrapper,
+        styles.dashboardWrapper,
+        className ?? styles.defaultDashboardWrapperStyle,
+      )}
       style={style}
       data-test-id={testId}
     >
