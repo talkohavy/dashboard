@@ -1,11 +1,26 @@
 {
   "index.html": {
-    "file": "main/index-C_JRsKyH.js",
+    "file": "main/index-B1ihJAOq.js",
     "name": "index",
     "src": "index.html",
     "isEntry": true,
+    "dynamicImports": [
+      "pages/DashboardExample1/index.ts"
+    ],
     "css": [
-      "static/css/index.DRiPjpFzJFIr.css"
+      "static/css/index.BVhYFLNzhI64.css"
+    ]
+  },
+  "pages/DashboardExample1/index.ts": {
+    "file": "static/js/index.CbrQykgT.js",
+    "name": "index",
+    "src": "pages/DashboardExample1/index.ts",
+    "isDynamicEntry": true,
+    "imports": [
+      "index.html"
+    ],
+    "css": [
+      "static/css/index.CFKYTRgeQKZE.css"
     ]
   }
 }
