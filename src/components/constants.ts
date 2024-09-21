@@ -1,4 +1,4 @@
-import { DashboardData, DashboardSettings } from '../../dist/main';
+import { DashboardData, DashboardSettings } from '../../lib/main';
 
 enum WidgetTypes {
   Text = 'text',

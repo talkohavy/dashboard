@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Dashboard, Undraggable, Widget } from '../../../dist/main';
+import { Dashboard, Undraggable, Widget } from '../../../lib/main';
 import { dashboardSettings, data } from '../constants';
 
 const WIDGET_MAPPER: Record<string, FC> = {
