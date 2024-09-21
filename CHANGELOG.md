@@ -1,5 +1,11 @@
 # @talkohavy/dashboard
 
+## 0.2.7
+
+### Patch Changes
+
+- added static classes to each major component
+
 ## 0.2.6
 
 ### Patch Changes
