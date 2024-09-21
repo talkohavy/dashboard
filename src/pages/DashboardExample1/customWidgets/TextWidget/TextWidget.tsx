@@ -9,7 +9,7 @@ export default function TextWidget(props: TextWidgetProps) {
   const { widgetId, text } = props;
 
   return (
-    <div className='size-full'>
+    <div className='size-full bg-neutral-50 dark:bg-[#ddd]'>
       <Undraggable>
         <div>widget id: {widgetId}</div>
         <div>{text}</div>
