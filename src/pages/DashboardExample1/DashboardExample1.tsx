@@ -16,7 +16,7 @@ export default function DashboardExample1() {
     <div className='size-full flex justify-center flex-col items-center gap-6'>
       <Title title='Dashboard Example 1' />
 
-      <Dashboard settings={dashboardSettings} data={widgetsArr}>
+      <Dashboard settings={dashboardSettings} data={widgetsArr} className='dark:bg-neutral-800'>
         {widgetsArr.map(({ i: widgetId, type, props }) => (
           <div key={widgetId}>
             <Widget axisHandlerPositions={dashboardSettings.widgets?.axisHandlerPositions} className='bg-neutral-200'>
