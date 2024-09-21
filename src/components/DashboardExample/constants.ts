@@ -1,5 +1,8 @@
-import { DashboardData, DashboardSettings } from '../../lib/main';
-import { WidgetTypes1 } from './DashboardExample/types.ts';
+import { DashboardData, DashboardSettings } from '../../../lib/main.ts';
+
+export enum WidgetTypes1 {
+  Text = 'text',
+}
 
 export const dashboardSettings: DashboardSettings = {
   dashboard: {
@@ -16,7 +19,7 @@ export const dashboardSettings: DashboardSettings = {
   },
 };
 
-export const data: DashboardData<WidgetTypes1> = [
+export const widgetsArr: DashboardData<WidgetTypes1> = [
   {
     i: 'aaa',
     type: WidgetTypes1.Text,
@@ -24,7 +27,9 @@ export const data: DashboardData<WidgetTypes1> = [
     y: 0,
     w: 2,
     h: 2,
-    props: {},
+    props: {
+      text: 'hello',
+    },
   },
   {
     i: 'bbb',
@@ -34,6 +39,8 @@ export const data: DashboardData<WidgetTypes1> = [
     w: 3,
     h: 3,
     static: true,
-    props: {},
+    props: {
+      text: 'world',
+    },
   },
 ];
