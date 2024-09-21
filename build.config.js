@@ -40,7 +40,7 @@ function cleanDistDirectory() {
 
 function buildWithVite() {
   console.log('- Step 2: build with vite');
-  execSync('tsc -p ./tsconfig.build.json && vite build --config vite.config.ts');
+  execSync('tsc -p ./tsconfig.build.json && vite build --config vite.config.package.ts');
 }
 
 function copyStaticFiles() {
