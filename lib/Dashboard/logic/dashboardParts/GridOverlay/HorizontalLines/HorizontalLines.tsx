@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { DASHBOARD_DEFAULT_LINES_COLOR } from '../../constants';
+import { DASHBOARD_DEFAULT_LINES_COLOR } from '../../../constants';
 import styles from './HorizontalLines.module.scss';
 
 type HorizontalLinesProps = {

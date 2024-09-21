@@ -4,8 +4,8 @@ export type {
   HandlerPositions,
   IWidget,
   OnChangeLayoutProps,
-} from './components/Dashboard/types';
+} from './Dashboard/types';
 
-export { default as Dashboard } from './components/Dashboard';
-export { default as Undraggable } from './components/Undraggable';
-export { default as Widget } from './components/Widget';
+export { default as Dashboard } from './Dashboard';
+export { default as Undraggable } from './Dashboard/logic/dashboardParts/Undraggable';
+export { default as Widget } from './Dashboard/logic/dashboardParts/Widget';

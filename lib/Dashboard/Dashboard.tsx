@@ -2,14 +2,15 @@ import { PropsWithChildren, useCallback, useEffect, useMemo, useRef, useState } 
 import clsx from 'clsx';
 import isEqual from 'lodash/isEqual';
 import { Layout, Responsive, WidthProvider } from 'react-grid-layout';
-import { DASHBOARD_DEFAULT_ROW_HEIGHT } from './constants';
 import styles from './Dashboard.module.scss';
-import DashboardWrapper from './DashboardWrapper';
-import GridOverlay from './GridOverlay';
-import { getMergedDashboardSettings, runValidationsOnData } from './helpers';
+import { DASHBOARD_DEFAULT_ROW_HEIGHT } from './logic/constants.ts';
+import DashboardWrapper from './logic/dashboardParts/DashboardWrapper/DashboardWrapper.tsx';
+import GridOverlay from './logic/dashboardParts/GridOverlay/GridOverlay.tsx';
+import { getMergedDashboardSettings } from './logic/helpers/getMergedDashboardSettings.ts';
+import { runValidationsOnData } from './logic/helpers/runValidationsOnData.ts';
 import { DashboardSettings, OnChangeLayoutProps, OnResizeOrDragStopProps } from './types';
 import 'react-grid-layout/css/styles.css';
-import './dashboards.css';
+import '../dashboards.css';
 
 const ResponsiveGridLayout = WidthProvider(Responsive);
 
