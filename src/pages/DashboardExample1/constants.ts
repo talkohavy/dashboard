@@ -1,4 +1,4 @@
-import { DashboardData, DashboardSettings } from '../../../lib/main.ts';
+import { DashboardData, DashboardSettings } from '../../../lib/main';
 
 export enum WidgetTypes1 {
   Text = 'text',

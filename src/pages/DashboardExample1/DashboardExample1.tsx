@@ -1,6 +1,6 @@
 import { Dashboard, Widget } from '../../../lib/main';
-import Title from '../Title';
-import { WidgetTypes1, dashboardSettings, widgetsArr } from './constants.ts';
+import Title from '../../components/Title';
+import { WidgetTypes1, dashboardSettings, widgetsArr } from './constants';
 import TextWidget from './customWidgets/TextWidget';
 
 const WIDGET_MAPPER = {
@@ -11,7 +11,7 @@ export type SharedWidgetProps = {
   widgetId: string;
 };
 
-export default function DashboardExample() {
+export default function DashboardExample1() {
   return (
     <div className='size-full flex justify-center flex-col items-center gap-6'>
       <Title title='Dashboard Example 1' />

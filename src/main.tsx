@@ -1,10 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App.tsx';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
 import './index.css';
+import DarkThemeProvider from './providers/DarkThemeProvider/DarkThemeProvider';
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-);
+function Client() {
+  return (
+    <React.StrictMode>
+      <BrowserRouter>
+        <DarkThemeProvider>
+          <App />
+        </DarkThemeProvider>
+      </BrowserRouter>
+    </React.StrictMode>
+  );
+}
+
+const rootElement = document.getElementById('root')!;
+
+ReactDOM.createRoot(rootElement).render(<Client />);

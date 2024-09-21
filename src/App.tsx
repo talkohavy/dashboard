@@ -1,9 +1,18 @@
-import DashboardExample from './components/DashboardExample';
+import { Suspense } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Layout from './components/Layout';
+import { routes } from './routes';
 
 export default function App() {
   return (
-    <div className='size-full p-6'>
-      <DashboardExample />
-    </div>
+    <Layout>
+      <Suspense>
+        <Routes>
+          {routes.map(({ to: path, Component }, index) => (
+            <Route key={index} path={path} element={<Component />} />
+          ))}
+        </Routes>
+      </Suspense>
+    </Layout>
   );
 }

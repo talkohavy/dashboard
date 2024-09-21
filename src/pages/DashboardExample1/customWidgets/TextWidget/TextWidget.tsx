@@ -1,5 +1,5 @@
-import { Undraggable } from '../../../../../lib/main.ts';
-import { SharedWidgetProps } from '../../DashboardExample.tsx';
+import { Undraggable } from '../../../../../lib/main';
+import { SharedWidgetProps } from '../../DashboardExample1';
 
 type TextWidgetProps = SharedWidgetProps & {
   text: string;
