@@ -1,5 +1,11 @@
 # @talkohavy/dashboard
 
+## 0.2.8
+
+### Patch Changes
+
+- added a new class hook for widgetHolderWithGap
+
 ## 0.2.7
 
 ### Patch Changes
